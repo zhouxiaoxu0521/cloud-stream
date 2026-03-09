@@ -1,0 +1,15 @@
+{
+  "name": "zhouxiaoxu-dev",
+  "owner": {
+    "name": "zhouxiaoxu",
+    "email": "xxx@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "zhouxiaoxu-plugin",
+      "source": "./",
+      "description": "",
+      "version": "1.0.0"
+    }
+  ]
+}
