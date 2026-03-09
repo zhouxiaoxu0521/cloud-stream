@@ -408,10 +408,10 @@ public class XxxServiceImpl extends ServiceImpl<XxxMapper, Xxx> implements IXxxS
         }
         
         // ✅ 租户支持(如果有租户支持字段执行该流程)
-        lqw.eq(SignedDocumentRecovery::getDelFlag, "0");    
+        lqw.eq(xxx::getTenantId, "0");    
         
         // ✅ 逻辑删除(如果有逻辑删除字段执行该流程)
-        lqw.eq(SignedDocumentRecovery::getDelFlag, "0");
+        lqw.eq(xxx::getDelFlag, "0");
       
         // ✅ 精确匹配(如果需要精确匹配执行该流程)
         lqw.eq(queryCondition.getId() != null, Xxx::getId, bo.getId());
@@ -608,12 +608,13 @@ authorName赋值为01450358
 
 ## 已生成文件清单
 
-### 后端代码 (7个文件)
+### 后端代码 (8个文件)
 - ✅ entity/Xxx.java (Entity)
 - ✅ vo/request/Xxxrequest.java (request)
 - ✅ vo/XxxVo.java (VO)
 - ✅ vo/XxxQuery.java (Query)
-- ✅ mapper/XxxMapper.java (Mapper)
+- ✅ mapper/XxxMapper.java (Mapper接口)
+- ✅ src/main/resources/mapper/XxxMapper.xml (Mapper实现)
 - ✅ service/IXxxService.java (Service接口)
 - ✅ service/impl/XxxServiceImpl.java (Service实现)
 - ✅ controller/XxxController.java (Controller)
